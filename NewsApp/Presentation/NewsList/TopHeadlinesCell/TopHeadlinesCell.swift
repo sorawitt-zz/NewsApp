@@ -9,9 +9,10 @@ import UIKit
 
 class TopHeadlinesCell: UICollectionViewCell {
 
+    @IBOutlet weak var newsImageView: UIImageView!
+    @IBOutlet weak var newsTitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
 }

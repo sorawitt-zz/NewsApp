@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,12 @@
 		221EACC825737EAF00D644AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 221EACC625737EAF00D644AC /* LaunchScreen.storyboard */; };
 		221EACD325737EAF00D644AC /* NewsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221EACD225737EAF00D644AC /* NewsAppTests.swift */; };
 		221EACDE25737EAF00D644AC /* NewsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221EACDD25737EAF00D644AC /* NewsAppUITests.swift */; };
+		221EACF025737F0C00D644AC /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 221EACEF25737F0C00D644AC /* Swinject */; };
+		221EACF62573832F00D644AC /* XCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = 221EACF52573832F00D644AC /* XCoordinator */; };
+		221EAD092573880A00D644AC /* TopHeadlinesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221EAD072573880A00D644AC /* TopHeadlinesCell.swift */; };
+		221EAD0A2573880A00D644AC /* TopHeadlinesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 221EAD082573880A00D644AC /* TopHeadlinesCell.xib */; };
+		221EAD102573915F00D644AC /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221EAD0F2573915F00D644AC /* NewsResponse.swift */; };
+		221EAD1825739F6300D644AC /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221EAD1725739F6300D644AC /* News.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,10 @@
 		221EACD925737EAF00D644AC /* NewsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		221EACDD25737EAF00D644AC /* NewsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppUITests.swift; sourceTree = "<group>"; };
 		221EACDF25737EAF00D644AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		221EAD072573880A00D644AC /* TopHeadlinesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopHeadlinesCell.swift; sourceTree = "<group>"; };
+		221EAD082573880A00D644AC /* TopHeadlinesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopHeadlinesCell.xib; sourceTree = "<group>"; };
+		221EAD0F2573915F00D644AC /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
+		221EAD1725739F6300D644AC /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				221EACF62573832F00D644AC /* XCoordinator in Frameworks */,
+				221EACF025737F0C00D644AC /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +111,9 @@
 		221EACBA25737EAD00D644AC /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				221EAD032573841700D644AC /* Data */,
+				221EAD00257383F100D644AC /* Presentation */,
+				221EACFB257383C600D644AC /* Domain */,
 				221EACBB25737EAD00D644AC /* AppDelegate.swift */,
 				221EACBD25737EAD00D644AC /* SceneDelegate.swift */,
 				221EACBF25737EAD00D644AC /* ViewController.swift */,
@@ -128,6 +143,111 @@
 			path = NewsAppUITests;
 			sourceTree = "<group>";
 		};
+		221EACFB257383C600D644AC /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				221EACFE257383DD00D644AC /* Interfaces */,
+				221EACFD257383D500D644AC /* Usecases */,
+				221EACFC257383CE00D644AC /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		221EACFC257383CE00D644AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				221EAD1725739F6300D644AC /* News.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		221EACFD257383D500D644AC /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		221EACFE257383DD00D644AC /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				221EACFF257383E500D644AC /* Repositories */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		221EACFF257383E500D644AC /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		221EAD00257383F100D644AC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				221EAD022573840A00D644AC /* NewsDetails */,
+				221EAD01257383F900D644AC /* NewsList */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		221EAD01257383F900D644AC /* NewsList */ = {
+			isa = PBXGroup;
+			children = (
+				221EAD06257387E300D644AC /* TopHeadlinesCell */,
+			);
+			path = NewsList;
+			sourceTree = "<group>";
+		};
+		221EAD022573840A00D644AC /* NewsDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NewsDetails;
+			sourceTree = "<group>";
+		};
+		221EAD032573841700D644AC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				221EAD0E2573914C00D644AC /* Entities */,
+				221EAD052573843900D644AC /* Network */,
+				221EAD042573842000D644AC /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		221EAD042573842000D644AC /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		221EAD052573843900D644AC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		221EAD06257387E300D644AC /* TopHeadlinesCell */ = {
+			isa = PBXGroup;
+			children = (
+				221EAD072573880A00D644AC /* TopHeadlinesCell.swift */,
+				221EAD082573880A00D644AC /* TopHeadlinesCell.xib */,
+			);
+			path = TopHeadlinesCell;
+			sourceTree = "<group>";
+		};
+		221EAD0E2573914C00D644AC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				221EAD0F2573915F00D644AC /* NewsResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +264,10 @@
 			dependencies = (
 			);
 			name = NewsApp;
+			packageProductDependencies = (
+				221EACEF25737F0C00D644AC /* Swinject */,
+				221EACF52573832F00D644AC /* XCoordinator */,
+			);
 			productName = NewsApp;
 			productReference = 221EACB825737EAD00D644AC /* NewsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +339,10 @@
 				Base,
 			);
 			mainGroup = 221EACAF25737EAD00D644AC;
+			packageReferences = (
+				221EACEE25737F0C00D644AC /* XCRemoteSwiftPackageReference "Swinject" */,
+				221EACF42573832F00D644AC /* XCRemoteSwiftPackageReference "XCoordinator" */,
+			);
 			productRefGroup = 221EACB925737EAD00D644AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				221EACC825737EAF00D644AC /* LaunchScreen.storyboard in Resources */,
+				221EAD0A2573880A00D644AC /* TopHeadlinesCell.xib in Resources */,
 				221EACC525737EAF00D644AC /* Assets.xcassets in Resources */,
 				221EACC325737EAD00D644AC /* Main.storyboard in Resources */,
 			);
@@ -258,7 +387,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				221EAD1825739F6300D644AC /* News.swift in Sources */,
 				221EACC025737EAD00D644AC /* ViewController.swift in Sources */,
+				221EAD102573915F00D644AC /* NewsResponse.swift in Sources */,
+				221EAD092573880A00D644AC /* TopHeadlinesCell.swift in Sources */,
 				221EACBC25737EAD00D644AC /* AppDelegate.swift in Sources */,
 				221EACBE25737EAD00D644AC /* SceneDelegate.swift in Sources */,
 			);
@@ -593,6 +725,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		221EACEE25737F0C00D644AC /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.1;
+			};
+		};
+		221EACF42573832F00D644AC /* XCRemoteSwiftPackageReference "XCoordinator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quickbirdstudios/XCoordinator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		221EACEF25737F0C00D644AC /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 221EACEE25737F0C00D644AC /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+		221EACF52573832F00D644AC /* XCoordinator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 221EACF42573832F00D644AC /* XCRemoteSwiftPackageReference "XCoordinator" */;
+			productName = XCoordinator;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 221EACB025737EAD00D644AC /* Project object */;
 }
